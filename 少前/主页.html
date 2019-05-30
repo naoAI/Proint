@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>主页</title>
+	<meta charset="utf-8">
+	<style type="text/css">
+		*{margin: 0;padding: 0;}
+		.top{
+			width: 100%;height: 150px;background:rgba(255,0,0,0.5);
+		}
+		.A{
+			width: 100%;height: 40px;background: #fff;
+		}
+		.A .A1{
+			width: 800px;height: 40px;background: #ff0;margin: 0 auto;
+		}
+		.A .A1 ul{
+			
+
+
+		}
+		.A .A1 ul li{
+			float: left;list-style: none;border:1px solid red;height: 39px;font-family: 微软雅黑;text-align: center;font-size: 20px;width: 60px;line-height: 40px;
+		}
+		.A .A1 ul li a{
+			color: #000;
+		}
+		
+	</style>
+</head>
+
+<body style="background: #000;" >
+	
+
+
+
+	<div class="top"></div>
+
+	<div class="A">
+		<div class="A1">
+			<ul>
+				<li><a href=""><b>首页</b></a></li>
+				<li><a href="">其他</a></li>
+				<li><a href="">其他</a></li>
+			</ul>
+			
+		</div>
+	</div>
+
+	
+
+
+<script type="text/javascript" src="http://libs.baidu.com/jquery/1.11.3/jquery.min.js"></script>
+
+<script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+
+<script type="text/javascript">
+(function($){
+	$.fn.snow = function(options){
+	var $flake = $('<div id="snowbox" />').css({'position': 'absolute','z-index':'9999', 'top': '-50px'}).html('&#10052;'),
+	documentHeight 	= $(document).height(),
+	documentWidth	= $(document).width(),
+	defaults = {
+		minSize		: 10,
+		maxSize		: 20,
+		newOn		: 1000,
+		flakeColor	: "#fff" /* 此处可以定义雪花颜色，若要白色可以改为#FFFFFF */
+	},
+	options	= $.extend({}, defaults, options);
+	var interval= setInterval( function(){
+	var startPositionLeft = Math.random() * documentWidth - 100,
+	startOpacity = 0.5 + Math.random(),
+	sizeFlake = options.minSize + Math.random() * options.maxSize,
+	endPositionTop = documentHeight - 200,
+	endPositionLeft = startPositionLeft - 500 + Math.random() * 500,
+	durationFall = documentHeight * 10 + Math.random() * 5000;
+	$flake.clone().appendTo('body').css({
+		left: startPositionLeft,
+		opacity: startOpacity,
+		'font-size': sizeFlake,
+		color: options.flakeColor
+	}).animate({
+		top: endPositionTop,
+		left: endPositionLeft,
+		opacity: 0.2
+	},durationFall,'linear',function(){
+		$(this).remove()
+	});
+	}, options.newOn);
+    };
+})(jQuery);
+$(function(){
+    $.fn.snow({ 
+	    minSize: 3, /* 定义雪花最小尺寸 */
+	    maxSize: 30,/* 定义雪花最大尺寸 */
+	    newOn: 200  /* 定义密集程度，数字越小越密集 */
+    });
+});
+</script>
+
+
+
+
+
+
+</body>
+</html>

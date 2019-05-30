@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <meta charset="utf-8">
+  
+    <title>登陆页面</title>
+    <link rel="shortcut icon" type="image/x-icon" href="img/ppl.ico" />
+    <style type="text/css">
+    *{margin: 0;padding: 0;}
+        html,body {
+            height: 100%;
+            margin: 0;
+            overflow-x: hidden;
+            overflow-y: hidden;       
+        }
+         input:focus { outline: none; }
+        #d {
+            position: absolute;
+            top:-50px;
+            left:-150px;
+            width: 120%;
+            height: 120%;
+            background:url("img/4.png");
+            background-size: 100% 100%;
+            transform: translate(200px,500px);
+            transition: transform 20ms;
+            overflow: hidden;
+           
+        }
+        #w{
+        	width: 100px;
+        	height: 50px;
+        	position: relative;
+        	top: 500px;
+        	left: 45%;
+        	
+        }
+        #w .btn{
+        	background: rgba(0,0,0,0);
+        	width: 200px;
+        	height: 50px;
+        	border: 5px solid #fff;
+        	border-radius: 10px;
+        	font-size: 20px;
+        	color: #fff;
+
+        	}
+        #w .btn:hover{
+        	background: #fff;
+        	color: #d85692;
+        	box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+        	transition:500ms;
+        	}
+         
+        .c1{
+            position: fixed;
+            top:0;
+            bottom: 0;
+            left:0;
+            right: 0;
+            background: rgba(0,0,0,.5);
+            z-index: 2;
+        }
+        .c2{
+            border-radius:20px;
+            background:rgba(255,255,255,0.5);
+            background-size: 100% 100%;
+            position: fixed;
+            width: 500px;
+            height: 400px;
+            top:50%;
+            left: 50%;
+            z-index: 3;
+            margin-top: -150px;
+            margin-left: -200px;
+        }
+        #modal p {
+            margin-left:80px;
+        }
+        .hide{
+            display: none;
+        }
+      .user{
+        width: 200px;
+        height: 30px;
+        border-radius: 20px;
+        border: 2px solid #000;
+        list-style: none;
+       padding-left: 20px;
+
+      }
+      .in{
+        position: absolute;
+        top: 50px;
+        left: 27%;
+      }
+      .pass{
+        width: 200px;
+        height: 30px;
+        border-radius: 20px;
+          padding-left: 20px;
+          border: 2px solid #000;
+
+        }
+      .out{
+        position: absolute;
+        top: 100px;
+        left: 27%;
+      }
+      .true{
+        width: 100%;height: 40px;position: absolute;top: 150px;background:rgba(0,0,0,0);font-size: 15px;
+        color:#666666;font-weight: bold;left: 0px;border: 0 solid ;
+      }
+      .false{
+         width: 100%;height: 40px;position: absolute;top: 190px;left:0px;background: rgba(0,0,0,0);font-size: 15px;
+         color: #666666;font-weight: bold;border: 0 solid;
+      }
+      .qq
+      {
+         width: 100%;height: 40px;position: absolute;top: 230px;left:0px;background: rgba(0,0,0,0);font-size:15px;
+         color: #666666;font-weight: bold;border: 0 solid;
+
+      }
+      .dele{
+        display: none;
+      }
+      .true:hover
+      {
+        background: rgba(255,255,255,0.6);
+      }
+      .false:hover
+      {
+        background: rgba(255,255,255,0.6);
+      }
+      .qq:hover
+      {
+        background: rgba(255,255,255,0.6);
+      }
+      
+      .c3{
+       border-radius:20px;
+            background:rgba(255,255,255,0.5);
+            background-size: 100% 100%;
+            position: fixed;
+            width: 500px;
+            height: 400px;
+            top:50%;
+            left: 50%;
+            z-index: 3;
+            margin-top: -150px;
+            margin-left: -200px;
+
+      }
+      .c4{
+        position: absolute;top:20px;left: 27%;
+
+      }
+   .user1{
+     width: 200px;
+        height: 30px;
+        border-radius: 20px;
+        border: 2px solid #000;
+        list-style: none;
+       padding-left: 20px;
+
+   }
+   .passw1{
+     width: 200px;
+        height: 30px;
+        border-radius: 20px;
+        border: 2px solid #000;
+        list-style: none;
+       padding-left: 20px;
+       position: absolute;
+       top: 50px;
+      left: 0;
+
+     
+   }
+   .passw2{
+     width: 200px;
+        height: 30px;
+        border-radius: 20px;
+        border: 2px solid #000;
+        list-style: none;
+       padding-left: 20px;
+       position: absolute;
+       top: 100px;
+
+   }
+   .hide3{
+   	 width: 100%;height: 40px;position: absolute;top: 180px;background:rgba(0,0,0,0);font-size: 15px;
+        color:#666666;font-weight: bold;left: 0px;border: 0 solid ;list-style: none;
+      }
+      .hide3:hover
+      {
+      	background: rgba(255,255,255,0.6);
+      }
+   
+   .hide4{
+   	 width: 100%;height: 40px;position: absolute;top: 230px;background:rgba(0,0,0,0);font-size: 15px;
+        color:#666666;font-weight: bold;left: 0px;border: 0 solid;
+
+   }
+   .hide4:hover
+   {
+   	background: rgba(255,255,255,0.6);
+
+   }
+   button{
+    outline: none;
+   }
+   
+  
+    </style>
+</head>
+<body>
+    <div id="d">
+    </div>
+
+<div id="w">
+	<a><button onclick="Show();" class="btn"><b>点击登陆</b></button></a>
+</div>
+        <div id="shade" class="c1 hide"></div>
+        <div id="modal" class="c2 hide">
+             <div class="in"><input type="text" class="user" placeholder="输入用户账号" /></div>
+            <div class="out"> <input type="password" class="pass" placeholder="输入用户密码" /></div>
+            <p>
+                <input type="button" value="登陆" class="true">
+                <input type="button" value="取消" onclick="Hide(); "class="false">
+                <input type="button" value="注册" class="qq" onclick="Bing();">
+            </p>
+                </div> 
+                <div id="Bin" class="c3 dele">
+                    <div class="c4">
+                    <input type="text" name="" class="user1" placeholder="用户账号">
+                    <input type="password" name="" class="passw1" placeholder="密码">
+                   <input type="password" name="" class="passw2" placeholder="确认密码">
+                </div>
+                   
+                    <input type="submit" name="" value="确认注册" class="hide3">
+                    <button id="wein" class="hide4" onclick="Weno();">取消</button>
+                </div>
+
+
+<script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+<script type="text/javascript">
+    document.onmousemove = function (e) {
+        e = e||window.event;
+        var x = 0.5-e.clientX/document.body.offsetWidth;
+        var y = 0.5-e.clientY/document.body.offsetHeight;
+        document.getElementById("d").style.transform = "translate("+x*200+"px,"+y*100+"px)";
+    };
+</script>
+
+<script type="text/javascript">
+(function($){
+    $.fn.snow = function(options){
+    var $flake = $('<div id="snowbox" />').css({'position': 'absolute','z-index':'9999', 'top': '-50px'}).html('&#10052;'),
+    documentHeight  = $(document).height(),
+    documentWidth   = $(document).width(),
+    defaults = {
+        minSize     : 10,
+        maxSize     : 20,
+        newOn       : 1000,
+        flakeColor  : "#fff" /* 此处可以定义雪花颜色，若要白色可以改为#FFFFFF */
+    },
+    options = $.extend({}, defaults, options);
+    var interval= setInterval( function(){
+    var startPositionLeft = Math.random() * documentWidth - 100,
+    startOpacity = 0.5 + Math.random(),
+    sizeFlake = options.minSize + Math.random() * options.maxSize,
+    endPositionTop = documentHeight - 200,
+    endPositionLeft = startPositionLeft - 500 + Math.random() * 500,
+    durationFall = documentHeight * 10 + Math.random() * 5000;
+    $flake.clone().appendTo('body').css({
+        left: startPositionLeft,
+        opacity: startOpacity,
+        'font-size': sizeFlake,
+        color: options.flakeColor
+    }).animate({
+        top: endPositionTop,
+        left: endPositionLeft,
+        opacity: 0.2
+    },durationFall,'linear',function(){
+        $(this).remove()
+    });
+    }, options.newOn);
+    };
+})(jQuery);
+$(function(){
+    $.fn.snow({ 
+        minSize: 2, /* 定义雪花最小尺寸 */
+        maxSize: 20,/* 定义雪花最大尺寸 */
+        newOn: 200  /* 定义密集程度，数字越小越密集 */
+    });
+});
+</script>
+<script type="text/javascript">
+    function Show()
+    {
+        document.getElementById("shade").classList.remove("hide");
+        document.getElementById("modal").classList.remove("hide");
+       document.getElementById("w").classList.add("dele");
+    }
+    function Hide(){
+        document.getElementById("shade").classList.add("hide");
+        document.getElementById("modal").classList.add("hide");
+        document.getElementById("w").classList.remove("dele");
+
+
+    }
+    function Bing()
+    {
+        document.getElementById("modal").classList.add("hide");
+
+        document.getElementById("Bin").classList.remove("dele");
+    }
+    function Weno()
+    {
+    	document.getElementById("Bin").classList.add("dele");
+    	document.getElementById("modal").classList.remove("hide");
+    }
+   
+
+</script>
+</body>
+</html>
